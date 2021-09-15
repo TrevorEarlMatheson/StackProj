@@ -6,25 +6,21 @@ namespace StackProj
     {
         static void Main(string[] args)
         {
-            Stack stack = new Stack();
+            ArrayListStack arrayListStack = new ArrayListStack();
 
-            stack.Push(1);
-            stack.Push(.00000002);
-            stack.Push("Take that stack");
+            arrayListStack.Push(1);
+            arrayListStack.Push(.00000002);
+            arrayListStack.Push("Take that stack");
             // stack.Push(null);
-            stack.Push(new int[8]);
+            arrayListStack.Push(new int[8]);
+            arrayListStack.StackCount();
+            arrayListStack.Pop();
+            arrayListStack.Pop();
+            arrayListStack.StackCount();
+            arrayListStack.Clear();
+            arrayListStack.StackCount();
 
-            stack.StackCount();
-
-            Console.WriteLine(stack.Pop());
-
-            Console.WriteLine(stack.Pop());
-
-            stack.StackCount();
-
-            stack.Clear();
-
-            stack.StackCount();
+            Console.WriteLine("\n");
         }
     }
 }

@@ -3,12 +3,12 @@ using System.Collections;
 
 namespace StackProj
 {
-    class Stack
+    class ArrayListStack
     {
         private ArrayList _Stack;
         private int _Top;
 
-        public Stack()
+        public ArrayListStack()
         {
             _Stack = new ArrayList();
             _Top = -1;
@@ -24,10 +24,11 @@ namespace StackProj
             {
                 _Top++;
                 _Stack.Add(obj);
+                Console.WriteLine("\"{0}\" added to the stack.", _Stack[_Top]);
             }
         }
 
-        public Object Pop()
+        public void Pop()
         {
             if(_Stack.Count <= 0)
             {
@@ -35,15 +36,15 @@ namespace StackProj
             }
             else
             {
-                var obj = _Stack[_Top];
+                Console.WriteLine("\"{0}\" removed from the stack.", _Stack[_Top]);
                 _Stack.RemoveAt(_Top);
                 _Top--;
-                return obj;
             }
         }
 
         public void Clear()
         {
+            Console.WriteLine("The stack has been cleared");
             _Stack.Clear();
         }
 
