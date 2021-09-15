@@ -24,6 +24,7 @@ namespace StackProj
 
             ArrayStack arrayStack = new ArrayStack(5);
 
+            arrayStack.Count();
             arrayStack.Pop();
 
             for(int i =0; i < 5; i++)
@@ -32,6 +33,7 @@ namespace StackProj
             }
 
             arrayStack.Peek();
+            arrayStack.Count();
             
             for(int i = 0; i < 2; i++)
             {
@@ -39,6 +41,7 @@ namespace StackProj
             }
 
             arrayStack.Peek();
+            arrayStack.Count();
 
             for(int i = 0; i < 3; i++)
             {
@@ -46,6 +49,7 @@ namespace StackProj
             }
 
             arrayStack.Peek();
+            arrayStack.Count();
         }
     }
 }
