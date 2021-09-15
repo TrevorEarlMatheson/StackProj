@@ -6,10 +6,12 @@ namespace StackProj
     class Stack
     {
         private ArrayList _Stack;
+        private int _Top;
 
         public Stack()
         {
             _Stack = new ArrayList();
+            _Top = -1;
         }
 
         public void Push(Object obj)
@@ -20,6 +22,7 @@ namespace StackProj
             }
             else
             {
+                _Top++;
                 _Stack.Add(obj);
             }
         }
@@ -32,8 +35,9 @@ namespace StackProj
             }
             else
             {
-                var obj = _Stack[_Stack.Count - 1];
-                _Stack.RemoveAt(_Stack.Count - 1);
+                var obj = _Stack[_Top];
+                _Stack.RemoveAt(_Top);
+                _Top--;
                 return obj;
             }
         }
