@@ -11,6 +11,7 @@ namespace StackProj
             arrayListStack.Push(1);
             arrayListStack.Push(.00000002);
             arrayListStack.Push("Take that stack");
+            //Uncomment the next line to test that null cases are handled.
             // stack.Push(null);
             arrayListStack.Push(new int[8]);
             arrayListStack.StackCount();
