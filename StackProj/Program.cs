@@ -21,6 +21,31 @@ namespace StackProj
             arrayListStack.StackCount();
 
             Console.WriteLine("\n");
+
+            ArrayStack arrayStack = new ArrayStack(5);
+
+            arrayStack.Pop();
+
+            for(int i =0; i < 5; i++)
+            {
+                arrayStack.Push(i);
+            }
+
+            arrayStack.Peek();
+            
+            for(int i = 0; i < 2; i++)
+            {
+                arrayStack.Pop();
+            }
+
+            arrayStack.Peek();
+
+            for(int i = 0; i < 3; i++)
+            {
+                arrayStack.Push(i);
+            }
+
+            arrayStack.Peek();
         }
     }
 }
